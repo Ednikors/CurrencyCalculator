@@ -122,7 +122,7 @@ public class CurrencyFrame extends JFrame implements ActionListener {
         toComboBox.setSelectedIndex(142);
 
         exchangeRateLabel = new JLabel("Exchange rate: ");
-        exchangeRateLabel.setBounds(20, 150, 500, 25);
+        exchangeRateLabel.setBounds(20, 175, 500, 25);
 
         calculateButton = new JButton("Get exchange rate");
         calculateButton.setBounds(20, 200, 200, 25);
@@ -173,7 +173,6 @@ public class CurrencyFrame extends JFrame implements ActionListener {
                     exchangeRateLabel.setText("Exchange rate: 1" + fromComboBox.getSelectedItem().toString() + " = " 
                     + f.format(rate) + toComboBox.getSelectedItem().toString());
                 }
-                System.out.println(Additional.getExchangeRate(fromComboBox.getSelectedItem().toString(), toComboBox.getSelectedItem().toString()).toString());
             } catch (JSONException | IOException | URISyntaxException e1) {
                 e1.printStackTrace();
             }
